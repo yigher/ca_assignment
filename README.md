@@ -9,12 +9,13 @@
 
 # Installation
 At the root directory of the project, run the following commands to install the libraries:
+```console
 	pip install virtualenv
 	mkdir culture_amp_env
 	virtualenv culture_amp_env/venv
 	culture_amp_env\venv\Scripts\activate.bat
 	pip install -r requirements.txt
-
+```
 # Program Execution
 The program can be run with the following command:
 	python main.py
