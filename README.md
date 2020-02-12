@@ -8,7 +8,7 @@
 		- tensorflow
 
 # Installation
-At the root directory of the project, run the following commands:
+At the root directory of the project, run the following commands to install the libraries:
 	pip install virtualenv
 	mkdir culture_amp_env
 	virtualenv culture_amp_env/venv
