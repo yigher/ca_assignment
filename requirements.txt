@@ -1,0 +1,7 @@
+numpy==1.16.2
+keras
+sklearn
+nltk
+gensim
+tensorflow
+.
