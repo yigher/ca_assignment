@@ -14,7 +14,7 @@ At the root directory of the project, run the following commands to install the 
 	pip install virtualenv
 	mkdir culture_amp_env
 	virtualenv culture_amp_env/venv
-	culture_amp_env\venv\Scripts\activate.bat
+	culture_amp_env/venv/Scripts/activate
 	pip install -r requirements.txt
 ```
 # Program Execution
