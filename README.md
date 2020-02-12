@@ -31,7 +31,7 @@ The below menu should be presented on the console:
 	Or enter some text to return the most similar reference questions
 	 >>
 ```	
-	## 1. Vectorise training data and train a new model
+## 1. Vectorise training data and train a new model
 	This option vectorises and trains the training data. It will prompt you to select a classification model:
 ```console	
 		Select the model. (Doc2Vec by default):
@@ -41,7 +41,7 @@ The below menu should be presented on the console:
 ```
 	It then prompts you to enter a training csv file, or if you press enter, the program will use the default data/labeled_data.csv file. 
 	
-	## 2. Test the model against a test file (default data/test_question.txt)
+## 2. Test the model against a test file (default data/test_question.txt)
 	This option attempts to predict the classifications of sentences in a test file. It prompts you to enter a test txt file, or if you press enter, the program will use the default data/test_questions.txt file. Below is an example classification output from the program. It will print the Sentence, the top two classifications, and their respective probabilities, as well as the classifications that are higher than the threshold (default 0.3).
 ```console		
 		Sentence:  we hold ourselves and our team members accountable for results
@@ -57,7 +57,7 @@ The below menu should be presented on the console:
 # Algorithm Description
 The program's algorithm is broken into 2 stages -- Sentence Vectorization and Classification. Note that training data is not processed in the Sentence Vectorization stage, as it has it own Word Embeddings implemented for that Model.
 
-	## Sentence Vectorization
+## Sentence Vectorization
 	 Doc2Vec is a method similar to Word2Vec. It generalises the Word2Vec by adding a paragraph/document vector. Like Word2Vec, there are two methods: Distributed Memory (DM) and Distributed Bag of Words (DBOW). DM attempts to predict a word given its previous words and a paragraph vector. Even though the context window moves across the text, the paragraph vector does not (hence distributed memory) and allows for some word-order to be captured.
 	 
 	 The objective of this part of the algorithm is to obtain a mathematical representation of the text, and group the text with similar numerical properties together.
@@ -67,7 +67,7 @@ The program's algorithm is broken into 2 stages -- Sentence Vectorization and Cl
 	 
 	 The sentences are preprocessed at this stage prior to forwarding it to the Classification stage of the algorithm.
 	 
-	## Classification
+## Classification
 	There are two classifiers implemented for the algorithm.
 		### Stochastic Gradient Descent Classifier
 		The Stochastic Gradient Descent classifier is a stochastic approximation of the gradient descent optimization method for minimizing an objective function that is written as a sum of differentiable functions. The method attempts to find minima or maxima by iteration.
@@ -75,12 +75,12 @@ The program's algorithm is broken into 2 stages -- Sentence Vectorization and Cl
 		### Gradient Boosting Classifier
 		Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiable loss function.
 
-		### LSTM
+### LSTM
 		Long short-term memory (LSTM) is a recurrent neural network (RNN) architecture that remembers values over arbitrary intervals. Stored values are not modified as learning proceeds. RNNs allow forward and backward connections between neurons.
 		An LSTM is well-suited to classify, process and predict time series given time lags of unknown size and duration between important events. Relative insensitivity to gap length gives an advantage to LSTM over alternative RNNs, hidden Markov models and other sequence learning methods in numerous applications.
 		The output of the network is a sigmoid function with 4 output nodes (containing the label classifications by probability), and the loss function used is binary cross entropy with an Adam optimiser - a SGD algorithm in which the gradient used in each iteration is updated from the previous using a technique based in momenta.
 		
-		### Classification Output
+### Classification Output
 		A probability of each classes (ALI.5, ENA.3, INN.2, TEA.2) is returned from the two models.
 		
 		### Training, Validation and Test data
@@ -88,6 +88,7 @@ The program's algorithm is broken into 2 stages -- Sentence Vectorization and Cl
 
 
 ## Software Project Description
+
 Below is a description of the project directory structure and file description
 	# Parent Direectory
 	* abstract_data_parser.py - Abstract base class for data parsers.
