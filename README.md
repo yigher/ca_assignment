@@ -21,6 +21,7 @@ The program can be run with the following command:
 	python main.py
 
 The below menu should be presented on the console:
+```console
 	Welcome,
 
 	Please choose the menu you want to start:
@@ -29,26 +30,26 @@ The below menu should be presented on the console:
 	0. Quit
 	Or enter some text to return the most similar reference questions
 	 >>
-	
+```	
 	## 1. Vectorise training data and train a new model
 	This option vectorises and trains the training data. It will prompt you to select a classification model:
-	
+```console	
 		Select the model. (Doc2Vec by default):
 		1. Stochastic Gradient Descent
 		2. Gradient Boosting Classification
 		3. Simple LSTM
-
+```
 	It then prompts you to enter a training csv file, or if you press enter, the program will use the default data/labeled_data.csv file. 
 	
 	## 2. Test the model against a test file (default data/test_question.txt)
 	This option attempts to predict the classifications of sentences in a test file. It prompts you to enter a test txt file, or if you press enter, the program will use the default data/test_questions.txt file. Below is an example classification output from the program. It will print the Sentence, the top two classifications, and their respective probabilities, as well as the classifications that are higher than the threshold (default 0.3).
-		
+```console		
 		Sentence:  we hold ourselves and our team members accountable for results
 		Classifications:  [['TEA.2', 'INN.2']]
 		Probability Score:  [ 0.96869981  0.06744113]
 		Top Classifications:  ['TEA.2']
 		Top Probability Score:  [ 0.96869981]
-
+```
 	
 	## or enter some text to return the most similar reference questions
 	You can also type in a sentence and hit enter at the main menu screen. The above mentioned sentence classification output in the previous section will be presented on the console for the input sentence.
